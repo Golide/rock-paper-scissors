@@ -1,6 +1,8 @@
 const gameOptions = ['Rock', 'Paper', 'Scissors'];
+let playerSelection;
+let computerSelection;
 
-function computerSelection() {
+function computerChoice() {
     return gameOptions[Math.floor(Math.random() * 3)];
 }
 
@@ -8,7 +10,7 @@ function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 } 
 
-function playerSelection() {
+function playerChoice() {
     do {
         playerSelection = capitalize(prompt('Rock, Paper or Scissors?'));
     } while (gameOptions.indexOf(playerSelection) == -1);
@@ -17,14 +19,14 @@ function playerSelection() {
 
 function playRound(playerSelection, computerSelection){
 
-    playerSelection = playerSelection();
-    computerSelection = computerSelection();
+    playerSelection = playerChoice();
+    computerSelection = computerChoice();
 
     console.log('Player Selection: ' + playerSelection);
     console.log('Computer Selection: ' + computerSelection);
 
     if (playerSelection == 'Rock' && computerSelection == 'Rock' || playerSelection == 'Paper' && computerSelection == 'Paper' || playerSelection == 'Scissors' && computerSelection == 'Scissors') {
-        console.log("Honors even. Draw!");
+        console.log("Draw!");
         return "Draw";
     } else if (playerSelection == 'Rock' && computerSelection == 'Scissors') {
         console.log("You Win! Rock beats Scissors.");
@@ -46,3 +48,39 @@ function playRound(playerSelection, computerSelection){
         return "Lose";
     }
 }
+
+function game() {
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+
+        switch (playRound(playerSelection, computerSelection)) {
+            case 'Draw':
+                break;
+            case 'Win':
+                playerScore++;
+                break;
+            case 'Lose':
+                computerScore++;
+                break;
+        }
+    }
+
+    if (playerScore > computerScore) {
+        console.log(`Your Score: ${playerScore}`);
+        console.log(`Computer Score: ${computerScore}`);
+        console.log('Congratulations. You win!');
+    } else if (playerScore < computerScore) {
+        console.log(`Your Score: ${playerScore}`);
+        console.log(`Computer Score: ${computerScore}`);
+        console.log('Hard luck. You lose!');
+    } else {
+        console.log(`Your Score: ${playerScore}`);
+        console.log(`Computer Score: ${computerScore}`);
+        console.log('Honors even. Draw!');
+    }
+}
+
+game();
