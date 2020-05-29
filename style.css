@@ -18,6 +18,11 @@
     justify-content: space-evenly;
 }
 
+#scoreboard-wrapper > div {
+    color: #e62649;
+    font-weight: bold;
+}
+
 #icon-wrapper {
     display: flex;
     justify-content: space-evenly;
