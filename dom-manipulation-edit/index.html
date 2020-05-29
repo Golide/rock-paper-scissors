@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/02cbe8cd3d.js" crossorigin="anonymous"></script>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+
+    <header id="header">
+      <h1>Round <span id="round-count">1</span></h1>
+    </header>
+
+    <section>
+      <h2 id="sub-header">Rock, Paper or Scissors?</h2>
+    </section>
+
+    <section id="icon-wrapper">
+      <div class="playerSelection" id="rock">
+        <i class="far fa-hand-rock fa-3x"></i>
+      </div>
+      <div class="playerSelection" id="paper">
+        <i class="far fa-hand-paper fa-3x"></i>
+      </div>
+      <div class="playerSelection" id="scissors">
+        <i class="far fa-hand-peace fa-3x"></i>
+      </div>
+    </section>
+
+    <section id="scoreboard-wrapper">
+      <div class="scoreboard-card">
+        <h3 id="win">Win</h2>
+        <div id="win-score">0</div>
+      </div>
+      <div class="scoreboard-card">
+        <h3 id="tie">Tie</h2>
+        <div id="tie-score">0</div>
+      </div>
+      <div class="scoreboard-card">
+        <h3 id="lose">Lose</h2>
+        <div id="lose-score">0</div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

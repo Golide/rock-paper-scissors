@@ -1,0 +1,38 @@
+* {
+    font-family: 'Josefin Sans', sans-serif;
+} 
+
+#header {
+    padding-top: 20px;
+    color: #e62649;
+    text-align: center;
+}
+
+#sub-header {
+    text-align: center;
+    color: #9d9cb8;
+}
+
+#scoreboard-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#icon-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+
+.playerSelection {
+    color: #e62649;
+    cursor: pointer;
+}
+
+h3 {
+    color: #9d9cb8;
+}
+
+.scoreboard-card {
+    text-align: center;
+}
